@@ -1,9 +1,9 @@
 <template>
-  <section class="hero is-dark is-bold">
+  <section class="hero is-danger is-bold">
     <div class="hero-body app-hero-is-small">
       <div class="container">
         <h1 class="title">
-          Good Morning
+          Good {{timeOfDay}}
         </h1>
         <h2 class="subtitle">
           Gamer
@@ -15,12 +15,38 @@
 
 <script>
 export default {
-  name: 'Banner'
-}
+  name: "Banner",
+  data() {
+    return {
+      timeOfDay: "Day"
+    };
+  },
+  methods: {
+    setTimeOfDay() {
+      let time = new Date().getHours();
+      switch (time) {
+        case time >= 6 && time < 12:
+          this.timeOfDay = "Morning";
+          break;
+        case time >= 12 && time < 16:
+          this.timeOfDay = "Afternoon";
+          break;
+        case time >= 16 && time < 21:
+          this.timeOfDay = "Evening";
+          break;
+        default:
+          this.timeOfDay = "Day";
+      }
+    }
+  },
+  mounted() {
+    this.setTimeOfDay();
+  }
+};
 </script>
 
 <style>
-.app-hero-is-small{
+.app-hero-is-small {
   padding: 2rem 1.5rem;
 }
 </style>

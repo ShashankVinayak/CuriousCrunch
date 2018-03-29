@@ -1,10 +1,10 @@
 <template>
-  <nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
     <!-- navbar-brand begin -->
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
         <img src="../assets/logo.png" alt="CuriousCrunch" width="35" height="50">
-        <p>CuriosCrunch</p>
+        <p>CuriousCrunch</p>
       </a>
       <div class="navbar-burger" @click="toggleMenu">
         <span></span>
