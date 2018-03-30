@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 
 import Home from "./components/Home/Main";
 import About from "./components/About/Main";
+import Contact from "./components/Contact/Main";
 import CardDetail from "./components/CardDetail/Main";
 
 Vue.use(VueRouter);
@@ -17,6 +18,11 @@ const routes = [
     path: "/about",
     name: "about",
     component: About
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: Contact
   },
   {
     path: "/detail/:id",

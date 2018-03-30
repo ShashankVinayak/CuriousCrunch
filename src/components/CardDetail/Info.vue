@@ -14,7 +14,7 @@
 
         <div class="level-right">
           <p class="level-item">
-            <button class="button is-success is-medium">Install</button>
+            <button class="button is-success is-medium">&#x1F4E5; Download</button>
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="is-size-6">
-              <strong>Downloads</strong>
+              <strong>&#x1F4E5; Downloads</strong>
             </p>
             <p class="is-size-5">250+</p>
           </div>
@@ -34,7 +34,7 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="is-size-6">
-              <strong>Rating</strong>
+              <strong>&#x2B50; Rating</strong>
             </p>
             <p class="is-size-5">4.3</p>
           </div>
@@ -43,7 +43,7 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="is-size-6">
-              <strong>Size</strong>
+              <strong>&#x1F4E6; Size</strong>
             </p>
             <p class="is-size-5">30mb</p>
           </div>

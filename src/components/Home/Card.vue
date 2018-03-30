@@ -19,7 +19,7 @@
 
           <div class="level-right">
             <div class="level-item">
-              <h2 class="is-size-7">4.3</h2>
+              <h2 class="is-size-7">&#x2B50; 4.3</h2>
             </div>
           </div>
         </div>

@@ -2,10 +2,10 @@
   <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
     <!-- navbar-brand begin -->
     <div class="navbar-brand">
-      <a class="navbar-item" href="#">
+      <router-link to="/" class="navbar-item">
         <img src="../assets/logo.png" alt="CuriousCrunch" width="35" height="50">
         <p>CuriousCrunch</p>
-      </a>
+      </router-link>
       <div class="navbar-burger" @click="toggleMenu">
         <span></span>
         <span></span>
@@ -50,4 +50,5 @@ export default {
   }
 };
 </script>
+
 
