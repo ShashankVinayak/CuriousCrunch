@@ -1,14 +1,19 @@
 <template>
-  <Banner />
+  <section class="app-home">
+    <Banner />
+    <CardList />
+  </section>
 </template>
 
 <script>
-import Banner from './Banner';
+import Banner from "./Banner";
+import CardList from "./CardList";
 
 export default {
-  name: 'Main',
+  name: "Home",
   components: {
-    Banner
+    Banner,
+    CardList
   }
 };
 </script>

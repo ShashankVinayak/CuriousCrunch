@@ -20,15 +20,15 @@
       </div>
 
       <div class="navbar-end">
-        <a class="navbar-item" href="#">
+        <router-link to="/" class="navbar-item" @click.native="toggleMenu">
           Home
-        </a>
-        <a class="navbar-item" href="#">
+        </router-link>
+        <router-link to="/about" class="navbar-item" @click.native="toggleMenu">
           About
-        </a>
-        <a class="navbar-item" href="#">
-          Contact Us
-        </a>
+        </router-link>
+        <router-link to="/contact" class="navbar-item" @click.native="toggleMenu">
+          Contact
+        </router-link>
       </div>
     </div>
     <!-- navbar-menu end -->
@@ -37,13 +37,17 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   methods: {
-    toggleMenu(){
-      document.getElementsByClassName('navbar-menu')[0].classList.toggle('is-active');
-      document.getElementsByClassName('navbar-burger')[0].classList.toggle('is-active');
+    toggleMenu() {
+      document
+        .getElementsByClassName("navbar-menu")[0]
+        .classList.toggle("is-active");
+      document
+        .getElementsByClassName("navbar-burger")[0]
+        .classList.toggle("is-active");
     }
   }
-}
+};
 </script>
 

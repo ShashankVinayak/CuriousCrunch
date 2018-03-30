@@ -24,7 +24,7 @@ export default {
   methods: {
     setTimeOfDay() {
       let time = new Date().getHours();
-      switch (time) {
+      switch (true) {
         case time >= 6 && time < 12:
           this.timeOfDay = "Morning";
           break;

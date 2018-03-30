@@ -1,18 +1,25 @@
 <template>
   <div class="app-content">
     <div class="container-fluid">
-      <Home />
+      <!-- <Home /> -->
+      <!-- <About /> -->
+      <!-- <CardDetail /> -->
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import Home from './Home/Main';
+import Home from "./Home/Main";
+import About from "./About/Main";
+import CardDetail from "./CardDetail/Main";
 
 export default {
-  name: 'Content',
+  name: "Content",
   components: {
-    Home
+    Home,
+    About,
+    CardDetail
   }
 };
 </script>
