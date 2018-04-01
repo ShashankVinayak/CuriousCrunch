@@ -6,7 +6,7 @@
           <div class="level-item">
             <p class="is-size-3">
               <strong>
-                {{ $route.params.id }}
+                {{ getGameName }}
               </strong>
             </p>
           </div>
@@ -14,7 +14,7 @@
 
         <div class="level-right">
           <p class="level-item">
-            <button class="button is-success is-medium">&#x1F4E5; Download</button>
+            <a :href="getGameDownloadURL" class="button is-success" target="_blank">&#x1F4E5; Download</a>
           </p>
         </div>
       </div>
@@ -27,7 +27,7 @@
             <p class="is-size-6">
               <strong>&#x1F4E5; Downloads</strong>
             </p>
-            <p class="is-size-5">250+</p>
+            <p class="is-size-5">{{getGameDownloads}}+</p>
           </div>
         </div>
 
@@ -36,7 +36,7 @@
             <p class="is-size-6">
               <strong>&#x2B50; Rating</strong>
             </p>
-            <p class="is-size-5">4.3</p>
+            <p class="is-size-5">{{getGameRating}}</p>
           </div>
         </div>
 
@@ -45,7 +45,7 @@
             <p class="is-size-6">
               <strong>&#x1F4E6; Size</strong>
             </p>
-            <p class="is-size-5">30mb</p>
+            <p class="is-size-5">{{getGameSize}}M</p>
           </div>
         </div>
       </div>
@@ -56,8 +56,25 @@
 
 <script>
 export default {
-  name: "Info"
-}
+  name: "Info",
+  computed: {
+    getGameName() {
+      return this.$store.getters.getGameName;
+    },
+    getGameDownloadURL() {
+      return this.$store.getters.getGameDownloadURL;
+    },
+    getGameDownloads() {
+      return this.$store.getters.getGameDownloads;
+    },
+    getGameRating() {
+      return this.$store.getters.getGameRating;
+    },
+    getGameSize() {
+      return this.$store.getters.getGameSize;
+    }
+  }
+};
 </script>
 
 <style>

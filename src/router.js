@@ -25,7 +25,7 @@ const routes = [
     component: Contact
   },
   {
-    path: "/detail/:id",
+    path: "/:name",
     name: "carddetail",
     component: CardDetail
   }

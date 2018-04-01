@@ -1,14 +1,13 @@
 <template>
   <article class="app-card-detail">
-    <div class="columns">
-      <div class="column app-no-padding is-3-desktop"></div>
+    <div class="columns is-centered">
       <div class="column is-6-desktop">
 
         <!-- Image -->
         <div class="card">
           <div class="card-image">
             <figure class="image is-16by9">
-              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              <img :src="'../../../static/' + gameName + 'Detail.jpg'" :alt="gameName + 'Detail'">
             </figure>
           </div>
         </div>
@@ -20,7 +19,6 @@
         <Description />
         
       </div>
-      <div class="column app-no-padding is-3-desktop"></div>
     </div>
 
   </article>
@@ -32,9 +30,17 @@ import Description from "./Description";
 
 export default {
   name: "CardDetail",
+  data(){
+    return {
+      gameName: this.$route.params.name
+    }
+  },
   components: {
     Info,
     Description
+  },
+  created(){
+    this.$store.dispatch('fetchGamesDetail',this.gameName);
   }
 };
 </script>

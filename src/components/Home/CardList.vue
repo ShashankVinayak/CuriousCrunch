@@ -1,8 +1,8 @@
 <template>
   <section class="app-cardlist">
     <div class="columns is-mobile is-multiline is-gapless">
-      <div class="column is-6-mobile is-4-tablet is-3-widescreen" v-for="(item, index) in cardList" v-bind:key="index">
-        <Card />
+      <div class="column is-6-mobile is-4-tablet is-3-widescreen" v-for="(game, index) in games" v-bind:key="index">
+        <Card v-bind:game="game" />
       </div>
     </div>
   </section>
@@ -16,12 +16,15 @@ export default {
   components: {
     Card
   },
-  data(){
-    return {
-      cardList: [0]
+  computed: {
+    games() {
+      return this.$store.getters.sortByRating;
     }
+  },
+  created() {
+    this.$store.dispatch("fetchGames");
   }
-}
+};
 </script>
 
 <style>

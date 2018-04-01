@@ -3,8 +3,9 @@
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
-          <router-link :to="{ name: 'carddetail', params: { id: 'CubeDown' } }">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+          <!-- <router-link :to="{ name: 'carddetail', params: { id: game.name } }"> -->
+          <router-link :to="'/'+game.name">
+            <img :src="'../../../static/'+game.name+'.jpg'" :alt="game.name">
           </router-link>
         </figure>
       </div>
@@ -13,13 +14,13 @@
         <div class="level is-mobile">
           <div class="level-left">
             <div class="level-item">
-              <h1 class="is-size-6">CubeDown</h1>
+              <h1 class="is-size-6">{{game.name}}</h1>
             </div>
           </div>
 
           <div class="level-right">
             <div class="level-item">
-              <h2 class="is-size-7">&#x2B50; 4.3</h2>
+              <h2 class="is-size-7">&#x2B50; {{game.rating}}</h2>
             </div>
           </div>
         </div>
@@ -31,7 +32,8 @@
 
 <script>
 export default {
-  name: "Card"
+  name: "Card",
+  props: ["game"]
 };
 </script>
 
