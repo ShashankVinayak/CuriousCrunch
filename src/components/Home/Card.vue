@@ -5,7 +5,7 @@
         <figure class="image is-4by3">
           <!-- <router-link :to="{ name: 'carddetail', params: { id: game.name } }"> -->
           <router-link :to="'/'+game.name">
-            <img :src="'../../../static/'+game.name+'.jpg'" :alt="game.name">
+            <img :src="'../../../static/images/'+game.name+'.jpg'" :alt="game.name">
           </router-link>
         </figure>
       </div>

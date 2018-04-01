@@ -7,7 +7,7 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-16by9">
-              <img :src="'../../../static/' + gameName + 'Detail.jpg'" :alt="gameName + 'Detail'">
+              <img :src="'../../../static/images/' + gameName + 'Detail.jpg'" :alt="gameName + 'Detail'">
             </figure>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default {
     Description
   },
   created(){
-    this.$store.dispatch('fetchGamesDetail',this.gameName);
+    this.$store.dispatch('fetchGameDetail',this.gameName);
   }
 };
 </script>

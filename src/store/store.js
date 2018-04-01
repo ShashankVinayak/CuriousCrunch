@@ -69,7 +69,20 @@ export const store = new Vuex.Store({
       }
     },
 
-    fetchGamesDetail({ commit }, gameName){
+    fetchGameDetail({ commit }, gameName){
+
+      //reset so that old content wont be displayed after routing
+      let game= {
+        name:gameName,
+        description: "",
+        downloadURL: "",
+        downloads: 0,
+        rating: 0,
+        size: 0
+      }
+      commit("setGameDetail", game);
+
+      //fetch for new cotent
       fetch("https://curiouscrunch.firebaseio.com/gamesdetail/"+gameName+".json").then(res=>{
         return res.json();
       }).then(data=>{
