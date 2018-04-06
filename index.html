@@ -10,5 +10,12 @@
   <body class="has-navbar-fixed-top">
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      if('serviceWorker' in navigator){
+        window.addEventListener('load',()=>{
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
   </body>
 </html>
